@@ -28,6 +28,17 @@
         </div>
     </div>
 
+    <div class="offset-4 col-4 d-flex flex-column">
+        <label class="text-start mb-2" for="type_id">Type</label>
+        <select class="form-control mb-3" name="type_id" id="type_id">
+            <option value="">No type</option>
+            @foreach ($types as $type)
+                <option @if (old('type_id', $project->type?->id) == $type->id) selected @endif value="{{ $type->id }}">
+                    {{ $type->label }}</option>
+            @endforeach
+        </select>
+    </div>
+
     <div class="col-12">
         <div class="mb-3">
             <label for="content" class="form-label">Project description</label>

@@ -13,6 +13,7 @@
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Title</th>
+                <th scope="col">Type</th>
                 <th scope="col">Created</th>
                 <th scope="col">Modified</th>
                 <th></th>
@@ -23,6 +24,7 @@
                 <tr>
                     <th scope="row">{{ $project->id }}</th>
                     <td>{{ $project->title }}</td>
+                    <td class="align-middle"><span>{{ $project->type ? $project->type->label : '-' }}</span></td>
                     <td>{{ $project->created_at }}</td>
                     <td>{{ $project->updated_at }}</td>
                     <td class="d-flex justify-content-end">

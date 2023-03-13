@@ -17,7 +17,7 @@ class TypeSeeder extends Seeder
 
         foreach ($categories as $categorie) {
             $type = new Type();
-            $type->lable =  $categorie;
+            $type->label =  $categorie;
             $type->save();
         }
     }
